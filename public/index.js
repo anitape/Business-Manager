@@ -95,38 +95,20 @@ function showList(json) {
         trow.appendChild(d6);
         trow.appendChild(d7);
         //ADD BUTTONS
-        update = document.createElement("input");
-        update.setAttribute("type", "button");
-        update.setAttribute("value", "Update");
-        update.setAttribute("id", "update");
-        update.setAttribute("onclick", "Clear()");
-        deleting = document.createElement("input");
-        deleting.setAttribute("type", "button");
-        deleting.setAttribute("value", "Delete");
-        deleting.setAttribute("id", "delete");
-        deleting.setAttribute("onclick", "Clear()");
-        d8.appendChild(update);
+        updating = document.createElement("a");
+        updating.setAttribute("class", "btn btn-info");
+        updating.setAttribute("type", "btn");
+        updating.setAttribute("role", "button");
+        updating.setAttribute("href", "http://127.0.0.1:8080/select/"+json.rows[i].id+'/'+json.rows[i].name+'/'+json.rows[i].street+'/'+json.rows[i].postcode+'/'+json.rows[i].city+'/'+json.rows[i].business_id+'/'+json.rows[i].email+'/'+json.rows[i].phone);
+        updating.innerText = "Update";
+        deleting = document.createElement("a");
+        deleting.setAttribute("class", "btn btn-info");
+        deleting.setAttribute("type", "btn");
+        deleting.setAttribute("role", "button");
+        deleting.setAttribute("href", "http://127.0.0.1:8080/delete/"+json.rows[i].id);
+        deleting.innerText = "Delete";
+        d8.appendChild(updating);
         d8.appendChild(deleting);
         trow.appendChild(d8);
     }
-}
-
-function Clear() {
-
-    $('.del').remove(); // delete unordered list with jQuery
-
-    // delete Ok-button
-    var btn = document.getElementById("Ok");
-    var parent  = document.getElementById("wholeContainer");
-    parent.removeChild(btn);
-
-    // put submit-button again on the form...
-    submitBtn = document.createElement("input");
-    submitBtn.setAttribute("type", "button");
-    submitBtn.setAttribute("value", "Lähetä");
-    submitBtn.setAttribute("id", "submit");
-    submitBtn.setAttribute("onclick", "makeQuery()");
-    var parent  = document.getElementById("wholeContainer");
-    parent.appendChild(submitBtn);
-
 }
