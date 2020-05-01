@@ -7,22 +7,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="index.html"><h2>Business Manager</h2></a>
+</nav>
+<br>
 <div class="row">
     <div class="col-md-10 offset-md-1">
-        <h1>Business Manager</h1>
+        <div class="card">
+        <div class="card-body">
+            <div class="col-md-8 offset-md-2" id="text">Business Manager provides a platform for managing a company's interactions with current and potential businesses.
+              It helps business-to-business contact management and improves business performance. <br>
+        </div>
+            <br>
         <form>
             <div class="form-row">
-                <div class="form-group col-md-2">
-                    <a class="btn btn-info" type="btn" role="button" href="create.html">Create</a>
+                <div class="form-group col-md-3">
+                    <a class="btn btn-info btn-block text-left" type="btn" role="button" href="create.html"><i class="fa fa-plus"></i> &nbsp; Create New Company</a>
                 </div>
                 <div class="form-group col-md-2">
-                    <input onclick="makeQuery()" type="button" value="View All" id="submit">
+                    <button class="btn btn-outline-info" onclick="makeQuery()" type="button" id="submit"> <i class="fa fa-server"></i> &nbsp; View All</button>
                 </div>
             </div>
              <div id="locationInfo" class="controls form-inline"></div>
         </form>
+        </div></div>
     </div>
 </div>
 </body>

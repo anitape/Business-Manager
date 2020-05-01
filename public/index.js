@@ -5,14 +5,11 @@ function makeQuery() {
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 json = JSON.parse(xmlhttp.responseText);
-                //myFunction(resultArr);
-                //document.getElementById("locationInfo").innerHTML = xmlhttp.responseText;
                 if (json.numOfRows > 0) { // something found
-                    // console.log(json.numOfRows + ", " + json.rows[0].Location_name);
                     showList(json);
                 }
                 else {
-                    document.getElementById("locationInfo").innerHTML = "<br/>Ei yrityksiä.";
+                    document.getElementById("locationInfo").innerHTML = "<br/>No companies.";
                 }
             }
         };
@@ -96,13 +93,13 @@ function showList(json) {
         trow.appendChild(d7);
         //ADD BUTTONS
         updating = document.createElement("a");
-        updating.setAttribute("class", "btn btn-info");
+        updating.setAttribute("class", "btn btn-sm btn-info");
         updating.setAttribute("type", "btn");
         updating.setAttribute("role", "button");
         updating.setAttribute("href", "http://127.0.0.1:8080/select/"+json.rows[i].id+'/'+json.rows[i].name+'/'+json.rows[i].street+'/'+json.rows[i].postcode+'/'+json.rows[i].city+'/'+json.rows[i].business_id+'/'+json.rows[i].email+'/'+json.rows[i].phone);
         updating.innerText = "Update";
         deleting = document.createElement("a");
-        deleting.setAttribute("class", "btn btn-info");
+        deleting.setAttribute("class", "btn btn-sm btn-link");
         deleting.setAttribute("type", "btn");
         deleting.setAttribute("role", "button");
         deleting.setAttribute("href", "http://127.0.0.1:8080/delete/"+json.rows[i].id);
@@ -112,3 +109,6 @@ function showList(json) {
         trow.appendChild(d8);
     }
 }
+
+
+

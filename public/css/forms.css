@@ -1,0 +1,26 @@
+body, div {
+    width:100%;
+
+}
+
+body {
+    background-image: url("../img/images3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #0d6375;
+}
+
+h2 {
+    margin-left: 135px;
+}
+
+h3 {
+    color: #117c8e;
+}
+
+.card {
+    border: 1px solid #c1c1c1;
+}

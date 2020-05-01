@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Update Company</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="index.html"><h2>Business Manager</h2></a>
+</nav>
+<br>
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <h1>Update Company</h1>
+        <div class="card">
+            <div class="card-body">
+        <h3>Update Company</h3><hr><br>
         <form action="http://127.0.0.1:8080/update" method="post">
+            <div class="form-row" hidden>
+                <div class="form-group col-md-2">
+                    <label>ID</label>
+                    <input type="text" id="id" class="form-control" name="id" placeholder="ID" value="<%= id %>">
+                </div>
+            </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Company Name</label>
@@ -35,24 +50,22 @@
                     <input type="text" id="city" class="form-control" name="city" placeholder="City" value="<%= city %>">
                 </div>
             </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="email" class="form-control" name="email" placeholder="Email" value="<%= email %>">
-            </div>
             <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Email</label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" value="<%= email %>">
+                </div>
                 <div class="form-group col-md-6">
                     <label>Phone number</label>
                     <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone number" value="<%= phone %>">
                 </div>
-                <div class="form-group col-md-6">
-                    <label>ID</label>
-                    <input type="text" id="id" class="form-control" name="id" placeholder="ID" value="<%= id %>">
-                </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+                <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
             </div>
         </form>
+    </div>
+</div>
     </div>
 </div>
 </body>
