@@ -30,8 +30,8 @@ $ npm install ejs
 ## Application Images
 Below is a screenshot which illustrates a main view of the application.
 
-![Screenshot](public/img/businessmanager.jpg)
+![Screenshot](public/img/businessmanager.JPG)
 
 A screenshot represented below illustrates create option of Business Manager.
 
-![Screenshot](public/img/createcompany.jpg)
+![Screenshot](public/img/createcompany.JPG)
